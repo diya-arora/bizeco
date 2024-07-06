@@ -1,0 +1,688 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Bizeco - Home</title>
+    <script src="https://kit.fontawesome.com/c416e79406.js" crossorigin="anonymous"></script>
+    <link href="https://api.fontshare.com/v2/css?f[]=switzer@300&f[]=gambarino@400&display=swap" rel="stylesheet">
+</head>
+
+<body style="
+font-family: 'Gambarino', serif;" class="overflow-x-hidden bg-[#012034] text-gray-300">
+
+    <section>
+        <div class="lg:md:flex ">
+            <Div class="lg:md:w-1/2">
+                <header class="px-[50px] py-4 text-gray-300">
+                    <div class="container flex justify-between h-16 mx-auto">
+                        <a rel="noopener noreferrer" href="#" aria-label="Back to homepage"
+                            class="flex flex-cols justify-center items-center h-full p-2">
+                            <div class=" ">
+                                <img class="h-24" src="logo.png">
+                                <div class='text-xl text-center'></div>
+                            </div>
+                        </a>
+                        <ul class="items-stretch hidden  md:flex">
+                            <li class="flex">
+                                <a rel="noopener noreferrer" href="#"
+                                    class="flex items-center px-4 -mb-1 border-b-2 border-transparent hover:underline underline-offset-8">Home</a>
+                            </li>
+                            <li class="flex">
+                                <a rel="noopener noreferrer" href="#About"
+                                    class="flex items-center px-4 -mb-1 border-b-2 border-transparent hover:underline underline-offset-8">About</a>
+                            </li>
+                            <li class="flex">
+                                <a rel="noopener noreferrer" href="#events"
+                                    class="flex items-center px-4 -mb-1 border-b-2 border-transparent hover:underline underline-offset-8 ">Events</a>
+                            </li>
+                            <li class="flex">
+                                <a rel="noopener noreferrer" href="#members"
+                                    class="flex items-center px-4 -mb-1 border-b-2 border-transparent hover:underline underline-offset-8 ">Members</a>
+                            </li>
+
+                        </ul>
+                        <button class="flex justify-end p-4 md:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </header>
+
+
+                <script>
+                    const button = document.querySelector('button');
+                    const ul = document.querySelector('ul');
+                    button.addEventListener('click', () => {
+                        ul.classList.toggle('hidden');
+                    });
+                </script>
+
+
+
+
+
+
+
+                <div class="flex flex-cols justify-align items-center px-10 lg:md:mt-32 mt-10">
+                    <Div class="grid gap-5">
+                        <div class="lg:text-6xl  md:text-6xl  text-4xl font-bold text-white" data-aos="fade-up">
+                            Welcome to Bizeco: DPS Rohini's Business and Economics Club</div>
+                        <Div data-aos="fade-up" style="font-family: 'Switzer', sans-serif;"
+                            class="text-3xl text-justify text-gray-300">Discover your potential with Bizeco and dive
+                            into
+                            the world of business and economics.</Div>
+                        <div class="grid lg:grid-cols-2 md:grid-cols-2  "><button onclick="downloadBrochure()"
+                                data-aos="fade-up" style="font-family: 'Switzer', sans-serif;  box-shadow: none;"
+                                onmouseover="this.style.boxShadow='0 0 20px #ffffff'"
+                                onmouseout="this.style.boxShadow='none'" class="bg-gray-800 h-16 w-60 text-xl rounded-full
+                           text-white border-2 hover:border-gray-800 transition
+                            ease-in-out flex flex-cols justify-center items-center  mt-5">
+
+                                Download Brochure&nbsp; <i class="fa-solid fa-arrow-right "></i>
+                            </button>
+                            <button onclick="openSocialsPopup()" class=" h-16 w-32 text-xl rounded-full
+                            hover:bg-gray-900 text-white hover:text-gray-300 border-2 hover:border-gray-800 transition
+                            ease-in-out flex flex-cols justify-center items-center  mt-5"
+                                onmouseover="this.style.boxShadow='0 0 20px #ffffff'"
+                                onmouseout="this.style.boxShadow='none'">
+
+                                Socials&nbsp; <i class="fa-solid fa-arrow-right "></i>
+                            </button>
+
+                            <div id="socialsPopup" style="font-family: 'Switzer', sans-serif;" class=" hidden fixed inset-0 bg-gray-800 bg-opacity-75 flex justify-center items-center
+                                z-50">
+                                <div class="bg-gray-900 p-5 rounded-lg">
+                                    <h2 class="text-2xl mb-4 text-white">Follow Us</h2>
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <a href="https://discord.gg/W5pN2HSKKq" target="_blank"
+                                            class="text-blue-600 flex items-center">
+                                            <i class="fa-brands fa-discord mr-2"></i> Discord
+                                        </a>
+                                        <a href="https://www.instagram.com/bizeco_dpsr/" target="_blank"
+                                            class="text-pink-600 flex items-center">
+                                            <i class="fa-brands fa-instagram mr-2"></i> Instagram
+                                        </a>
+
+                                    </div>
+                                    <button onclick="closeSocialsPopup()"
+                                        class="mt-4 bg-gray-800 text-white px-4 py-2 rounded">Close</button>
+                                </div>
+                            </div>
+
+                            <script>
+                                function openSocialsPopup() {
+                                    document.getElementById('socialsPopup').classList.remove('hidden');
+                                }
+
+                                function closeSocialsPopup() {
+                                    document.getElementById('socialsPopup').classList.add('hidden');
+                                }
+                            </script>
+                        </div>
+                        <script>
+                            function downloadBrochure() {
+                                const link = document.createElement('a');
+                                link.href = 'brochure.pdf';
+                                link.target = '_blank';
+                                document.body.appendChild(link);
+                                link.click();
+                                document.body.removeChild(link);
+                            }
+                        </script>
+                    </Div>
+                </div>
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const menuButton = document.querySelector('.menu-button');
+                    const menu = document.querySelector('.menu');
+
+                    menuButton.addEventListener('click', function () {
+                        menu.classList.toggle('open');
+                    });
+                });
+            </script>
+            <div data-aos="fade-up" style="font-family: 'Switzer', sans-serif;"
+                class="hidden lg:md:block lg:md:w-1/2  bg-gray-900 h-screen border-gray-900 rounded-tr-[45vh] rounded-bl-[45vh] border-t-[30px] relative  border-b-[30px] border-r-[40px]  p-4 ">
+                <div class="flex flex-cols justify-center items-center h-full px-10">
+
+
+                    <div class="-bottom-30 text-white absolute font-bold text-[48vh] right-3">'24</div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+        </Div>
+    </section>
+    <section id="About" class=" grid lg:md:flex justify-center items-center lg:md:mt-0 mt-10 text-white">
+        <div class="text-center my-10 px-20">
+            <h1 class="text-5xl font-bold mb-4" data-aos="fade-up">About Us</h1>
+            <div class="text-xl text-gray-300 mb-8 lg:text-2xl text-justify" style="font-family: 'Switzer', sans-serif;"
+                data-aos="fade-up">Bizeco, the Business and economics Club of DPS Rohini, is dedicated to nurturing
+                future
+                leaders and entrepreneurs. We provide a platform for students to explore business strategies, enhance
+                financial literacy, and develop essential leadership skills. Through interactive sessions, workshops,
+                and competitions, we inspire creativity, critical thinking, and a passion for economic excellence. Join
+                us to embark on your journey towards a successful future in business and economics.
+
+    </section>
+
+    <Section id='events' class="lg:md:mt-0 mt-10 ">
+        <div class="text-center p-10 ">
+            <h2 class="text-5xl text-white font-bold mb-6 " data-aos="fade-down">Events</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
+                <div class="bg-gray-900 p-6 rounded-lg shadow-lg border-2 border-gray-800" data-aos="fade-down">
+                    <div class="flex  mb-10">
+
+                        <div class="text-sm text-left">
+                            <p class="text-white leading-none text-4xl">BIZECO STOCK EXCHANGE</p>
+
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-base mb-4 text-justify " style="font-family: 'Switzer', sans-serif;">
+                        Embark on the
+                        ultimate stock market simulation adventure at the BSE! Strategize, calculate, and conquer as you
+                        navigate the dynamic world of trading. Don't forget your calculator - every trade is a puzzle
+                        waiting to be solved, shaping your path to financial victory.
+                    </p>
+
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg shadow-lg border-2 border-gray-800" data-aos="fade-down">
+                    <div class="flex  mb-10">
+
+                        <div class="text-sm text-left">
+                            <p class="text-white leading-none text-4xl">MACQUIRE
+                            </p>
+
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-base mb-4 text-justify" style="font-family: 'Switzer', sans-serif;">
+                        Merge to Emerge:
+                        Dive into the world of corporate synergy with Macquire, where every merger is a strategic leap
+                        towards unprecedented success.
+
+                    </p>
+
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg shadow-lg border-2 border-gray-800" data-aos="fade-down">
+                    <div class="flex  mb-10">
+
+                        <div class="text-sm text-left">
+                            <p class="text-white leading-none text-4xl">INVESTOR’S PITCH </p>
+
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-base mb-4 text-justify" style="font-family: 'Switzer', sans-serif;">
+                        From Idea to
+                        Investment: Step into the Investor's Pitch, where your financial prowess meets innovation,
+                        turning bold concepts into profitable ventures!
+
+                    </p>
+
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg shadow-lg border-2 border-gray-800" data-aos="fade-down">
+                    <div class="flex  mb-10">
+
+                        <div class="text-sm text-left">
+                            <p class="text-white leading-none text-4xl">CRYPTECO
+                            </p>
+
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-base mb-4 text-justify" style="font-family: 'Switzer', sans-serif;">
+                        Attention all
+                        business mavens! Let us take you on an exhilarating journey through layers of mind-bending
+                        quizzes, cryptic challenges, and delightful surprises. Only the sharpest minds will carve their
+                        place at the summit of success.
+
+                    </p>
+
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg shadow-lg border-2 border-gray-800" data-aos="fade-down">
+                    <div class="flex  mb-10">
+
+                        <div class="text-sm text-left">
+                            <p class="text-white leading-none text-4xl">ESTATE BATTLE
+                            </p>
+
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-base mb-4 text-justify" style="font-family: 'Switzer', sans-serif;">
+                        Ready to explore
+                        your potential as a realtor? Navigate the highs and lows of the real estate market to unveil
+                        your true prowess
+
+                    </p>
+
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg shadow-lg border-2 border-gray-800" data-aos="fade-down">
+                    <div class="flex  mb-10">
+
+                        <div class="text-sm text-left">
+                            <p class="text-white leading-none text-4xl">AD-STRATIFY
+                            </p>
+
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-base mb-4 text-justify" style="font-family: 'Switzer', sans-serif;">
+                        Explore your knack for ad-making. Dive in, navigate challenges, and unleash your creative edge
+                        in crafting captivating ads
+                    </p>
+
+                </div>
+
+    </Section>
+
+    <section class="px-20 ">
+        <div class="flex justify-center items-center lg:md:h-96 p-10 rounded-[40px] bg-[#012034] " data-aos="zoom-in">
+            <div class="text-4xl" data-aos="zoom-in"></div>
+            <div class="text-center mt-8" data-aos="zoom-in">
+                <h2 class="text-3xl text-white font-bold mb-4" data-aos="zoom-in">Have Questions ?</h2>
+                <p class="text-xl text-white mb-6 px-10 hidden lg:md:block " style="font-family: 'Switzer', sans-serif;"
+                    data-aos="zoom-in">Connect with us on our <a href='https://www.instagram.com/bizeco_dpsr/'
+                        class='underline-offset-8 underline'>Instagram Handle</a> or <a
+                        href='mailto:bizeco@dpsrohini.in' class="underline-offset-8 underline"> mail us.</a></p>
+                <div class="flex justify-center items-center" data-aos="zoom-in">
+                    <a onclick="openLoginForm()" style="font-family: 'Switzer', sans-serif;  box-shadow: none;"
+                        onmouseover="this.style.boxShadow='0 0 20px #000000'"
+                        onmouseout="this.style.boxShadow='none'"" class=" bg-gray-800 h-16 w-48 text-xl rounded-full
+                        hover:bg-gray-900 text-white hover:text-gray-300 border-2 hover:border-gray-800 transition
+                        ease-in-out flex flex-cols justify-center items-center ">
+
+                        Contact us &nbsp; <i class=" fa-solid fa-arrow-right "></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div id=" loginForm" class="hidden fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50">
+                        <div class="bg-gray-900 p-16 rounded-lg z-60">
+                            <!-- component -->
+                            <!-- Tailwind Play: https://play.tailwindcss.com/qIqvl7e7Ww  -->
+
+                            <div class="flex min-h-screen items-center justify-start bg-gray-900">
+                                <div class="mx-auto w-full max-w-lg">
+                                    <h1 class="text-4xl font-medium">Contact us</h1>
+                                    <p class="mt-3">Email us at bizeco@dpsrohini.in or message us here:</p>
+
+                                    <form action="https://api.web3forms.com/submit" method='post' class="mt-10">
+
+                                        <!-- This is a working contact form. 
+             Get your free access key from: https://web3forms.com/  -->
+
+                                        <input type="hidden" name="access_key"
+                                            value="fbd93c78-8840-4daa-84ee-9e4ce136fa13" />
+                                        <div class="grid gap-6 sm:grid-cols-2"
+                                            style="font-family: 'Switzer', sans-serif;">
+                                            <div class="relative z-0">
+                                                <input type="text" name="name"
+                                                    class="peer block w-full appearance-none border-0 border-b border-gray-500 bg-transparent py-2.5 px-0 text-sm text-white focus:border-blue-600 focus:outline-none focus:ring-0"
+                                                    placeholder=" " />
+                                                <label
+                                                    class="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-blue-600 peer-focus:dark:text-blue-500">Your
+                                                    name</label>
+                                            </div>
+                                            <div class="relative z-0">
+                                                <input type="text" name="email"
+                                                    class="peer block w-full appearance-none border-0 border-b border-gray-500 bg-transparent py-2.5 px-0 text-sm text-white focus:border-blue-600 focus:outline-none focus:ring-0"
+                                                    placeholder=" " />
+                                                <label
+                                                    class="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-blue-600 peer-focus:dark:text-blue-500">Your
+                                                    email</label>
+                                            </div>
+                                            <div class="relative z-0 col-span-2">
+                                                <textarea name="message" rows="3"
+                                                    class="peer block w-full appearance-none border-0 border-b border-gray-500 bg-transparent py-2.5 px-0 text-sm text-white focus:border-blue-600 focus:outline-none focus:ring-0"
+                                                    placeholder=" "></textarea>
+                                                <label
+                                                    class="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-blue-600 peer-focus:dark:text-blue-500">Your
+                                                    message</label>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center justify-between mt-5">
+                                            <button type="submit" class="rounded-md bg-black px-10 py-2 text-white">Send
+                                                Message</button>
+                                            <button type="button" onclick="closeLoginForm()"
+                                                class="py-2 px-4 bg-gray-500 text-white rounded hover:bg-gray-600">Cancel</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <script>
+                    function openLoginForm() {
+                        document.getElementById('loginForm').style.display = 'flex';
+                    }
+                    function closeLoginForm() {
+                        document.getElementById('loginForm').style.display = 'none';
+                    }
+                    document.addEventListener('DOMContentLoaded', function () {
+                        const menuButton = document.querySelector('.menu-button');
+                        const menu = document.querySelector('.menu');
+
+                        menuButton.addEventListener('click', function () {
+                            menu.classList.toggle('open');
+                        });
+                    });
+                </script>
+
+
+
+
+    </section>
+
+
+    <section id="members" class=" grid lg:md:flex justify-center items-center lg:md:mt-0 mt-10">
+        <div class="text-center my-10 px-20">
+            <h1 class="text-5xl font-bold mb-4 text-white" data-aos="fade-up">The Faculty.</h1>
+            <p class="text-xl text-gray-300 mb-8 lg:text-2xl text-center" style="font-family: 'Switzer', sans-serif;"
+                data-aos="fade-up">People who inspire us to be the best.
+
+            </p>
+            <div class="grid lg:grid-cols-4 w-screen px-20 gap-5">
+                <div class="bg-gray-900 rounded-lg p-8 flex flex-col items-center justify-center mb-5">
+                    <div class="bg-gray-900 h-20 overflow-hidden w-20 rounded-full mb-5" data-aos="flip-left">
+                        <img src="Ms. Nisha Jain .jpeg" class="rounded-full w-full h-auto" alt="Profile Picture">
+                    </div>
+                    <h2 class="text-2xl font-bold mb-2 mt-5">Ms. Nisha Jain</h2>
+                    <p class="text-gray-600 text-left"></p>
+                </div>
+            
+                <div class="bg-gray-900 rounded-lg p-8 flex flex-col items-center justify-center mb-5">
+                    <div class="bg-gray-900 h-20 overflow-hidden w-20 rounded-full mb-5" data-aos="flip-left">
+                        <img src="Mr. Pallav Gupta.jpeg" class="rounded-full w-full h-auto" alt="Profile Picture">
+                    </div>
+                    <h2 class="text-2xl font-bold mb-2 mt-5">Mr. Pallav Gupta</h2>
+                    <p class="text-gray-600 text-left"></p>
+                </div>
+                <div class="bg-gray-900 rounded-lg p-8 flex flex-col items-center justify-center mb-5">
+                    <div class="bg-gray-900 h-20 overflow-hidden w-20 rounded-full mb-5" data-aos="flip-left">
+                        <img src="Ms. Rohini Seth.jpeg" class="rounded-full w-full h-auto" alt="Profile Picture">
+                    </div>
+                    <h2 class="text-2xl font-bold mb-2 mt-5">Ms. Rohini Seth</h2>
+                    <p class="text-gray-600 text-left"></p>
+                </div>
+                <div class="bg-gray-900 rounded-lg p-8 flex flex-col items-center justify-center mb-5">
+                    <div class="bg-gray-900 h-20 overflow-hidden w-20 rounded-full mb-5" data-aos="flip-left">
+                        <img src="Ms. Kusum Bassi.jpeg" class="rounded-full w-full h-auto" alt="Profile Picture">
+                    </div>
+                    <h2 class="text-2xl font-bold mb-2 mt-5">Ms. Kusum Bassi</h2>
+                    <p class="text-gray-600 text-left"></p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section id="members" class=" grid lg:md:flex  w-screen px-10 justify-center items-center lg:md:mt-0 mt-10">
+        <div class="text-center my-10 px-20">
+            <h1 class="text-5xl font-bold mb-4 text-white" data-aos="fade-up">The Team.</h1>
+            <p class="text-xl text-gray-300 mb-8 lg:text-2xl text-center" style="font-family: 'Switzer', sans-serif;"
+                data-aos="fade-up">People that make it happen.
+
+
+
+
+            </p>
+            <div class="grid md:grid-cols-2 gap-10 mb-10" style="font-family: 'Switzer', sans-serif;">
+                <div class="bg-gray-900 rounded-lg p-8 flex flex-col items-center justify-center mb-5">
+                    <div class="bg-gray-200 h-20 w-20 p-2 rounded-full overflow-hidden" data-aos="flip-left">
+                        <img src="Vanya.jpeg" class="shadow-lg rounded-full">
+                    </div>
+                    <h2 class="text-2xl font-bold mb-2 mt-5">Vanya Arora</h2>
+                    <p class="text-gray-600 text-left">Director</p>
+                </div>
+                <div class="bg-gray-900 rounded-lg p-8 flex flex-col items-center justify-center mb-5">
+                    <div class="bg-gray-200 h-20 overflow-hidden w-20 p-2 rounded-full" data-aos="flip-left">
+                        <img src="Shrey.jpeg" class="shadow-lg">
+                    </div>
+                    <h2 class="text-2xl font-bold mb-2 mt-5">Shrey Aggarwal</h2>
+                    <p class="text-gray-600 text-left">Director</p>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-10" style="font-family: 'Switzer', sans-serif;">
+
+                <div class="bg-gray-900 rounded-lg p-8 flex flex-col items-center justify-center mb-5">
+                    <div class="bg-gray-200 h-20 overflow-hidden w-20 p-2 rounded-full" data-aos="flip-left">
+                        <img src="Aradhya.jpeg" class="shadow-lg">
+                    </div>
+                    <h2 class="text-2xl font-bold mb-2 mt-5">Aradhya Aggarwal</h2>
+                    <p class="text-gray-600 text-left">Cabinet</p>
+                </div>
+                <div class="bg-gray-900 rounded-lg p-8 flex flex-col items-center justify-center mb-5">
+                    <div class="bg-gray-200 h-20 overflow-hidden w-20 p-2 rounded-full" data-aos="flip-left">
+                        <img src="namanveernakra.jpeg" class="shadow-lg">
+                    </div>
+                    <h2 class="text-2xl font-bold mb-2 mt-5">Naman Veer Nakra</h2>
+                    <p class="text-gray-600 text-left">Cabinet</p>
+                </div>
+                <div class="bg-gray-900 rounded-lg p-8 flex flex-col items-center justify-center mb-5">
+                    <div class="bg-gray-200 h-20 overflow-hidden w-20 p-2 rounded-full" data-aos="flip-left">
+                        <img src="saachi jain_ad-stratify.jpeg" class="shadow-lg">
+                    </div>
+                    <h2 class="text-2xl font-bold mb-2 mt-5">Saachi Jain</h2>
+                    <p class="text-gray-600 text-left">Cabinet</p>
+                </div><div class="bg-gray-900 rounded-lg p-8 flex flex-col items-center justify-center mb-5">
+                    <div class="bg-gray-200 h-20 overflow-hidden w-20 p-2 rounded-full" data-aos="flip-left">
+                        <img src="namanveernakra.jpeg" class="shadow-lg">
+                    </div>
+                    <h2 class="text-2xl font-bold mb-2 mt-5">Naman Veer Nakra</h2>
+                    <p class="text-gray-600 text-left">Bizeco Stock Exchange</p>
+                </div>
+                <div class="bg-gray-900 rounded-lg p-8 flex flex-col items-center justify-center mb-5">
+                    <div class="bg-gray-200 h-20 overflow-hidden w-20 p-2 rounded-full" data-aos="flip-left">
+                        <img src="sehajmiglani_bse.jpeg" class="shadow-lg">
+                    </div>
+                    <h2 class="text-2xl font-bold mb-2 mt-5">Sehaj Miglani</h2>
+                    <p class="text-gray-600 text-left">Bizeco Stock Exchange</p>
+                </div>
+                <div class="bg-gray-900 rounded-lg p-8 flex flex-col items-center justify-center mb-5">
+                    <div class="bg-gray-200 h-20 overflow-hidden w-20 p-2 rounded-full" data-aos="flip-left">
+                        <img src="ruvankapoor.jpeg" class="shadow-lg">
+                    </div>
+                    <h2 class="text-2xl font-bold mb-2 mt-5">Ruvan</h2>
+                    <p class="text-gray-600 text-left">Bizeco Stock Exchange</p>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-10" style="font-family: 'Switzer', sans-serif;">
+                <div class="bg-gray-900 rounded-lg p-8 flex flex-col items-center justify-center mb-5">
+                    <div class="bg-gray-200 h-20 overflow-hidden w-20 p-2 rounded-full" data-aos="flip-left">
+                        <img src="aryanwalia_investor's.jpeg" class="shadow-lg">
+                    </div>
+                    <h2 class="text-2xl font-bold mb-2 mt-5">Aryan Walia</h2>
+                    <p class="text-gray-600 text-left">Investor's Pitch</p>
+                </div>
+                <div class="bg-gray-900 rounded-lg p-8 flex flex-col items-center justify-center mb-5">
+                    <div class="bg-gray-200 h-20 overflow-hidden w-20 p-2 rounded-full" data-aos="flip-left">
+                        <img src="arundhatijain_investor's.jpeg" class="shadow-lg">
+                    </div>
+                    <h2 class="text-2xl font-bold mb-2 mt-5">Arundhati Jain</h2>
+                    <p class="text-gray-600 text-left">Investor's Pitch</p>
+                </div>
+                <div class="bg-gray-900 rounded-lg p-8 flex flex-col items-center justify-center mb-5">
+                    <div class="bg-gray-200 h-20 overflow-hidden w-20 p-2 rounded-full" data-aos="flip-left">
+                        <img src="hitarthsachdeva.jpeg" class="shadow-lg">
+                    </div>
+                    <h2 class="text-2xl font-bold mb-2 mt-5">Hitarth Sachdeva</h2>
+                    <p class="text-gray-600 text-left">Investors's Pitch</p>
+                </div>
+                <div class="bg-gray-900 rounded-lg p-8 flex flex-col items-center justify-center mb-5">
+                    <div class="bg-gray-200 h-20 overflow-hidden w-20 p-2 rounded-full" data-aos="flip-left">
+                        <img src="Aradhya.jpeg" class="shadow-lg">
+                    </div>
+                    <h2 class="text-2xl font-bold mb-2 mt-5">Aradhya Aggarwal</h2>
+                    <p class="text-gray-600 text-left">Macquire</p>
+                </div>
+                <div class="bg-gray-900 rounded-lg p-8 flex flex-col items-center justify-center mb-5">
+                    <div class="bg-gray-200 h-20 overflow-hidden w-20 p-2 rounded-full" data-aos="flip-left">
+                        <img src="sanyajain_macquirejpeg.jpeg" class="shadow-lg">
+                    </div>
+                    <h2 class="text-2xl font-bold mb-2 mt-5">Sanya Jain</h2>
+                    <p class="text-gray-600 text-left">Macquire</p>
+                </div>
+                <div class="bg-gray-900 rounded-lg p-8 flex flex-col items-center justify-center mb-5">
+                    <div class="bg-gray-200 h-20 overflow-hidden w-20 p-2 rounded-full" data-aos="flip-left">
+                        <img src="yash pahuja.jpeg" class="shadow-lg">
+                    </div>
+                    <h2 class="text-2xl font-bold mb-2 mt-5">Yash Pahuja</h2>
+                    <p class="text-gray-600 text-left">Macquire</p>
+                </div>
+                <div class="bg-gray-900 rounded-lg p-8 flex flex-col items-center justify-center mb-5">
+                    <div class="bg-gray-200 h-20 overflow-hidden w-20 p-2 rounded-full" data-aos="flip-left">
+                        <img src="nitigya aggarwal.jpeg" class="shadow-lg">
+                    </div>
+                    <h2 class="text-2xl font-bold mb-2 mt-5">Nitigya Aggarwal</h2>
+                    <p class="text-gray-600 text-left">Estate Battle</p>
+                </div>
+                <div class="bg-gray-900 rounded-lg p-8 flex flex-col items-center justify-center mb-5">
+                    <div class="bg-gray-200 h-20 overflow-hidden w-20 p-2 rounded-full" data-aos="flip-left">
+                        <img src="Sanyam.jpeg" class="shadow-lg">
+                    </div>
+                    <h2 class="text-2xl font-bold mb-2 mt-5">Sanyam Mathur</h2>
+                    <p class="text-gray-600 text-left">Estate Battle</p>
+                </div>
+
+                <div class="bg-gray-900 rounded-lg p-8 flex flex-col items-center justify-center mb-5">
+                    <div class="bg-gray-200 h-20 overflow-hidden w-20 p-2 rounded-full" data-aos="flip-left">
+                        <img src="aahanajain_estate.jpeg" class="shadow-lg">
+                    </div>
+                    <h2 class="text-2xl font-bold mb-2 mt-5">Aahana Jain</h2>
+                    <p class="text-gray-600 text-left">Estate Battle</p>
+                </div>
+                <div class="bg-gray-900 rounded-lg p-8 flex flex-col items-center justify-center mb-5">
+                    <div class="bg-gray-200 h-20 overflow-hidden w-20 p-2 rounded-full" data-aos="flip-left">
+                        <img src="sharvimakhija_crypteco.jpeg" class="shadow-lg">
+                    </div>
+                    <h2 class="text-2xl font-bold mb-2 mt-5">Sharvi Makhija</h2>
+                    <p class="text-gray-600 text-left">Crypteco</p>
+                </div>
+                <div class="bg-gray-900 rounded-lg p-8 flex flex-col items-center justify-center mb-5">
+                    <div class="bg-gray-200 h-20 overflow-hidden w-20 p-2 rounded-full" data-aos="flip-left">
+                        <img src="delishadhingra_crypteco.jpeg" class="shadow-lg">
+                    </div>
+                    <h2 class="text-2xl font-bold mb-2 mt-5">Delisha Dhingra</h2>
+                    <p class="text-gray-600 text-left">Crypteco</p>
+                </div>
+                <div class="bg-gray-900 rounded-lg p-8 flex flex-col items-center justify-center mb-5">
+                    <div class="bg-gray-200 h-20 overflow-hidden w-20 p-2 rounded-full" data-aos="flip-left">
+                        <img src="tejasgupta_crypteco.jpeg" class="shadow-lg">
+                    </div>
+                    <h2 class="text-2xl font-bold mb-2 mt-5">Tejas Gupta</h2>
+                    <p class="text-gray-600 text-left">Crypteco</p>
+                </div>
+                <div class="bg-gray-900 rounded-lg p-8 flex flex-col items-center justify-center mb-5">
+                    <div class="bg-gray-200 h-20 overflow-hidden w-20 p-2 rounded-full" data-aos="flip-left">
+                        <img src="aanyajain_ad-stratify.jpeg" class="shadow-lg">
+                    </div>
+                    <h2 class="text-2xl font-bold mb-2 mt-5">Aanya Jain</h2>
+                    <p class="text-gray-600 text-left">Ad-Stratify</p>
+                </div>
+                <div class="bg-gray-900 rounded-lg p-8 flex flex-col items-center justify-center mb-5">
+                    <div class="bg-gray-200 h-20 overflow-hidden w-20 p-2 rounded-full" data-aos="flip-left">
+                        <img src="saachi jain_ad-stratify.jpeg" class="shadow-lg">
+                    </div>
+                    <h2 class="text-2xl font-bold mb-2 mt-5">Saachi Jain</h2>
+                    <p class="text-gray-600 text-left">Ad-Stratify</p>
+                </div>
+                <div class="bg-gray-900 rounded-lg p-8 flex flex-col items-center justify-center mb-5">
+                    <div class="bg-gray-200 h-20 overflow-hidden w-20 p-2 rounded-full" data-aos="flip-left">
+                        <img src="devansh gambhir_adstratify.jpeg" class="shadow-lg">
+                    </div>
+                    <h2 class="text-2xl font-bold mb-2 mt-5">Devansh Gambhir</h2>
+                    <p class="text-gray-600 text-left">Ad-Stratify</p>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+
+    <footer
+        class="w-full py-20 px-20 mt-20 grid lg:md:flex md:flex lg:flex-col md:flex-col lg:flex-row justify-between items-center relative bg-gray-900">
+        <div class="max-w-6xl w-full px-4 text-white  md:flex lg:flex-row  md:flex-rowgrid justify-between items-start">
+            <div class="w-full lg:w-1/3">
+                <div class="mb-8">
+                    <p class="text-xl mb-2">Connect With Us</p>
+                    <div class="flex flex-col lg:flex-row lg:space-x-4">
+
+                        <a href="https://www.instagram.com/bizeco_dpsr/" target="_blank"
+                            class="text-pink-600 flex items-center">
+                            <i class="fa-brands fa-instagram mr-2"></i> Instagram
+                        </a>
+                        <a href="https://discord.gg/W5pN2HSKKq" target="_blank" class="text-blue-600 flex items-center">
+                            <i class="fa-brands fa-discord mr-2"></i> Discord
+
+                            <a href="mailto:bizeco@dpsrohini.in" target="_blank"
+                                class="text-yellow-600 flex items-center">
+                                <i class="fa-solid fa-envelope mr-2"></i> Email
+                            </a>
+                    </div>
+                </div>
+                <div class="mb-8">
+                    <p>&copy; 2024 Bizeco. All rights reserved.</p>
+
+                </div>
+            </div>
+            <hr class="mt-5 mb-5 block lg:hidden md:hidden">
+            <div class="hidden lg:block md:block w-0.5 md:w-1/2 bg-gray-500 mx-4"></div>
+            <div class="w-full lg:w-1/2 md:w-1/2 xl:w-1/3">
+                <h3 class="text-2xl font-bold mb-4">Contact Us</h3>
+                <div id="loginForm">
+                    <form action="https://api.web3forms.com/submit" method='post'>
+                        <input type="hidden" name="access_key" value="fbd93c78-8840-4daa-84ee-9e4ce136fa13" />
+                        <div class="mb-4">
+                            <label for="name" class="block text-sm font-medium text-gray-300">Name</label>
+                            <input style="font-family: 'Switzer', sans-serif;" type="text" id="name" name="name"
+                                class="mt-1 p-2 w-full bg-transparent border-b border-gray-500 text-white focus:outline-none focus:border-white"
+                                required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-sm font-medium text-gray-300">Email</label>
+                            <input style="font-family: 'Switzer', sans-serif;" type="email" id="email" name="email"
+                                class="mt-1 p-2 w-full bg-transparent border-b border-gray-500 text-white focus:outline-none focus:border-white"
+                                required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-sm font-medium text-gray-300">Message</label>
+                            <textarea style="font-family: 'Switzer', sans-serif;" id="message" name="message" rows="4"
+                                class="mt-1 p-2 w-full bg-transparent border-b border-gray-500 text-white focus:outline-none focus:border-white"
+                                required></textarea>
+                        </div>
+                        <div class="flex justify-end">
+                            <button type="submit"
+                                class="py-2 px-4 bg-transparent border border-white w-32 text-white rounded-full hover:bg-gray-900 hover:text-gray-300 transition ease-in-out">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="absolute bottom-5 left-5 text-white">
+            <div>Made with ❤️ for Bizeco by Aditya Madan, Dhruv Dewan and Parin Arora</div>
+
+        </div>
+        </div>
+
+
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
